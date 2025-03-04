@@ -22,10 +22,7 @@ namespace DungeonExplorer
         {
             return string.Join(", ", inventory);
         }
-        public int getHealth()
-        {
-            return this.Health;
-        }
+
         public string Heal()
         {
             Console.WriteLine("You took a swig from your flask and feel a pump. You have regained 20 HP.");

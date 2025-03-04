@@ -28,7 +28,7 @@ namespace DungeonExplorer
                 while (currentMonster.getHealth() > 0)
                 {
 
-                    Console.WriteLine($"Explorer's current HP is: {player.getHealth()}");
+                    Console.WriteLine($"Explorer's current HP is: {player.Health}");
                     Console.WriteLine($"Minotaur's current HP is: {currentMonster.getHealth()}");
                     string input = this.ExplorerInput();
                     if (input == ("a"))
