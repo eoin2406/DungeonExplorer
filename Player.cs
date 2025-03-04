@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DungeonExplorer
 {
@@ -15,11 +16,32 @@ namespace DungeonExplorer
         }
         public void PickUpItem(string item)
         {
-
+        inventory.Add(item);
         }
         public string InventoryContents()
         {
             return string.Join(", ", inventory);
+        }
+        public int getHealth()
+        {
+            return this.Health;
+        }
+        public string Heal()
+        {
+            Console.WriteLine("You took a swig from your flask and feel a pump. You have regained 20 HP.");
+            this.Health = this.Health + 20;
+            return $"Your HP is now: {this.Health}";
+        }
+        public bool CheckForItems()
+        {
+            if (inventory.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
