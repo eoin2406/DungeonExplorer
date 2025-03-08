@@ -17,9 +17,10 @@ namespace DungeonExplorer
         {
             return description;
         }
-        public string RoomContents()
+        public string GetRoomContents()
         {
-            return ("an old map");
+            string item = inventory[0];
+            return item;
         }
     }
 }

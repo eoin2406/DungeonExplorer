@@ -10,19 +10,25 @@ namespace DungeonExplorer
     {
         private int Health { get; set; }
         private string Name { get; set; }
-        public Monster(string Name, int Health) 
+        public Monster(string Name, int Health)
         {
             this.Name = Name;
             this.Health = Health;
         }
-        public int getHealth()
+        public int GetHealth()
         {
             return this.Health;
         }
-        public string attackDmg()
+        public string GetAttackDmg()
         {
             this.Health = this.Health - 10;
-            return $"You swing your broadsword and attack the minotaur, it now has {this.Health} HP.";
+            return $"You swing your broadsword, attacking the minotaur. It now has {this.Health} HP.";
+        }
+        public string GetEnemyAttackDmg(Player player)
+        {
+            int Dmg = 15;
+            player.GetDmgTaken(Dmg);
+            return $"The minotaur lunges at you, causing you to stumble backwards. You received {Dmg} damage.";
         }
     }
 }

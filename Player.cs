@@ -9,24 +9,24 @@ namespace DungeonExplorer
         public int Health { get; private set; }
         private List<string> inventory = new List<string>();
 
-        public Player(string name, int health) 
+        public Player(string name, int health)
         {
             Name = name;
             Health = health;
         }
         public void PickUpItem(string item)
         {
-        inventory.Add(item);
+            inventory.Add(item);
         }
-        public string InventoryContents()
+        public string GetInventoryContents()
         {
             return string.Join(", ", inventory);
         }
-        public int getHealth()
+        public int GetHealth()
         {
             return this.Health;
         }
-        public string Heal()
+        public string HealPlayer()
         {
             Console.WriteLine("You took a swig from your flask and feel a pump. You have regained 20 HP.");
             this.Health = this.Health + 20;
@@ -43,5 +43,11 @@ namespace DungeonExplorer
                 return false;
             }
         }
+
+        public void GetDmgTaken(int dmg)
+        {
+            Health = Health - dmg;
+        }
+
     }
 }
