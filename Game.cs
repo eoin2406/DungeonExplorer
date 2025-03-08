@@ -14,7 +14,7 @@ namespace DungeonExplorer
         public Game()
         {
             // Initialize the game with one room and one player
-            CurrentRoom = new Room("You stumble upon a gloomy room containing a horrifying creature and potential wonders. After noticing some sort of scroll on the floor, the beast glares at you with rage, knowing you have disturbed its slumber. You must act fast...");
+            CurrentRoom = new Room("After hours of exploring, you are greeted with a gloomy room containing a horrifying creature and a big door at the back. After noticing some sort of scroll on the floor, the beast roars at you with rage. You have disturbed its slumber, you must act fast...");
             Player = new Player("Explorer", 100);
             CurrentMonster = new Monster("Minotaur", 50);
         }
@@ -24,6 +24,7 @@ namespace DungeonExplorer
             bool playing = true;
             Console.WriteLine(CurrentRoom.GetDescription());
             while (playing == true)
+            // Loop to allow the user to make input whilst the game is running. Once the minotaur or the player reach 0HP, these options no longer work as the game has ended
             {
                 while (CurrentMonster.GetHealth() > 0 && Player.GetHealth() > 0)
                 {
@@ -76,6 +77,7 @@ namespace DungeonExplorer
 
 
         }
+        // User input options are shown below. ToLower() and Trim() functions are used to allow the user to input capitals or lowercase, whilst also clearing any blank spaces that could potentially have been inputted by the user
         private string ExplorerInput()
         {
             Console.WriteLine("What do you do?");
@@ -90,7 +92,7 @@ namespace DungeonExplorer
                 Console.WriteLine("Type \"inv\" to view your inventory.");
             }
             string input = Console.ReadLine();
-            return input;
+            return input.ToLower().Trim();
         }
     }
 }
