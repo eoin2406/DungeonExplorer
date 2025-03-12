@@ -52,6 +52,7 @@ namespace DungeonExplorer
         // Function to display the damage taken
         public void GetDmgTaken(int dmg)
         {
+            Test.TestForPositiveInteger(dmg);
             Health = Health - dmg;
         }
 
