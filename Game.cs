@@ -94,7 +94,7 @@ namespace DungeonExplorer
             }
             string input = Console.ReadLine();
             // Debug.Assert is used here throughout user input
-            Debug.Assert(input == "inv" || input == "pick" || input == "heal" || input == "attack", "Test failed. Invalid input.");
+            Debug.Assert(input == "inv" || input == "pick" || input == "heal" || input == "attack", "Test failed: Invalid input.");
             return input.ToLower().Trim();
         }
     }

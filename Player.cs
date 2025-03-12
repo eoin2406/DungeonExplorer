@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DungeonExplorer
 {
@@ -11,7 +12,11 @@ namespace DungeonExplorer
 
         public Player(string name, int health)
         {
+            // Debug.Assert is used to check the player has a name
+            Debug.Assert(name != null, "Test failed: Player has no name.");
             Name = name;
+            // Testing to see if the health is a positive integer
+            Test.TestForPositiveInteger(health);
             Health = health;
         }
         // Function to pick up the item and add it to the inventory
