@@ -77,7 +77,7 @@ namespace DungeonExplorer
 
 
         }
-        // User input options are shown below. ToLower() and Trim() functions are used to allow the user to input capitals or lowercase, whilst also clearing any blank spaces that could potentially have been inputted by the user
+        // User input options are shown below. ToLower() and Trim() methods are used to allow the user to input capitals or lowercase, whilst also clearing any blank spaces that could potentially have been inputted by the user
         private string ExplorerInput()
         {
             Console.WriteLine("What do you do?");

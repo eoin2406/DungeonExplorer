@@ -12,12 +12,12 @@ namespace DungeonExplorer
             this.description = description;
             this.inventory.Add("an old map");
         }
-        // Function to display the description of the room
+        // Method to display the description of the room
         public string GetDescription()
         {
             return description;
         }
-        // Function to show the items found in the room, currently only an old map
+        // Method to show the items found in the room, currently only an old map
         public string GetRoomContents()
         {
             string item = inventory[0];

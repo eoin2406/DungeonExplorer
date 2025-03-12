@@ -15,18 +15,18 @@ namespace DungeonExplorer
             this.Name = Name;
             this.Health = Health;
         }
-        // Function to display the health of the minotaur
+        // Method to display the health of the minotaur
         public int GetHealth()
         {
             return this.Health;
         }
-        // Function to display the damage done to the minotaur
+        // Method to display the damage done to the minotaur
         public string GetAttackDmg()
         {
             this.Health = this.Health - 10;
             return $"You swing your broadsword, attacking the minotaur. It now has {this.Health} HP.";
         }
-        // Function to display the damage done to the player
+        // Method to display the damage done to the player
         public string GetEnemyAttackDmg(Player player)
         {
             int Dmg = 15;
