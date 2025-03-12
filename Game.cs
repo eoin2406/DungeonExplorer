@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Media;
 using System.Runtime.InteropServices;
 
@@ -92,6 +93,7 @@ namespace DungeonExplorer
                 Console.WriteLine("Type \"inv\" to view your inventory.");
             }
             string input = Console.ReadLine();
+            Debug.Assert(input == "inv" || input == "pick" || input == "heal" || input == "attack", "Test failed. Invalid input.");
             return input.ToLower().Trim();
         }
     }
